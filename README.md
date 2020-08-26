@@ -1,24 +1,24 @@
-# README
+# Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Setup the Database
+  - rake db:create
+  - rake db:migrate
+  - rake db:seed
 
-Things you may want to cover:
+2. Start the server
+  - rails s
 
-* Ruby version
+3. Test
+  - bundle exec rspec
 
-* System dependencies
 
-* Configuration
+# Endpoints
 
-* Database creation
+root: /
 
-* Database initialization
+### Categories
+  - /categories         [:index]
+  - /categories/:id     [:show, :post, :put, :destroy]
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Flash Cards
+  - /categories/:category_id/flash_cards/:id    [:show, :post, :put, :destroy]
